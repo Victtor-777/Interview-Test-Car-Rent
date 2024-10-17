@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Funcionalidades
 
-## Getting Started
+- [x] Página de Filtro: Permite selecionar uma marca de veículo e o ano do modelo.
+- [x] Página de Resultados: Exibe uma lista dos modelos de veículos filtrados, com base nas seleções feitas na página de filtro.
+- [x] Navegação com Next.js: Utiliza rotas dinâmicas para exibir os resultados.
+- [x] Configuração de Ambiente: Suporte para variáveis de ambiente através de um arquivo .env.local.
 
-First, run the development server:
+## Instruções de Configuração
 
-```bash
+1. Clone o repositório:
+
+git clone https://github.com/Victtor-777/test-car
+
+2. Instale as dependências:
+
+npm install
+Configuração de Variáveis de Ambiente: Crie um arquivo .env.local no diretório raiz para armazenar variáveis de ambiente, se necessário.
+
+3. Execute o projeto em modo de desenvolvimento:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Construa o projeto para produção:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+npm run build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+5. Inicie o projeto em modo de produção:
 
-## Learn More
+npm start
 
-To learn more about Next.js, take a look at the following resources:
+## Technical Choices Explained
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Why I Used Fetch API Instead of Axios or React Query ?
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+I chose not to use Axios because it utilizes "XMLRequest" under the hood, and for Next.js cache to work effectively, the "Fetch API" is required. Additionally, I didn't see the need for TanStack Query in this project since it’s relatively simple.
 
-## Deploy on Vercel
+So, I opted for the Fetch API due to the simplicity of the project and the need for only a few API calls that could be easily managed with this native API. The Fetch API allowed me to keep the code lightweight and avoid additional dependencies.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Suspense and Incremental Static Regeneration (ISR)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Suspense was used to improve the user experience by displaying a loading indicator while data is being fetched. ISR was configured so that some pages are pre-rendered during the build (for popular brands and years), while less frequently accessed pages are dynamically loaded and cached.
+
+### Static Page Generation with generateStaticParams
+
+To improve performance and SEO, pages for the most popular brand and year combinations are pre-rendered. I used a few sample brands, such as "BMW, Toyota, Ford, Mercedes, Tesla," and fetched data for the last five years. This resulted in a total of 30 static pages, which will provide instant access to information for users.
+
+I didn’t generate static pages for all possible combinations, as it would have led to an overly large build with longer build times. Instead, I focused on the most frequently accessed car models.
+
+Other combinations are dynamically generated as needed.
+
+### Images in the Project
+
+I included placeholder images in the project to allow for future use, in case the API eventually returns an image for each car. This setup will enable each image to be displayed on the car information card.
+
+### Styling and Responsiveness
+
+For the design, I referenced a few open Figma projects related to car rentals.
+
+I used Tailwind CSS and Shadcn UI to ensure consistent and efficient design, as I had around 7 hours to develop this project.
+
+I focused on implementing the core features first and left styling until the end, so the "Home" page may lack some responsive design elements and styles I wanted to implement. However, I believe the project looks good!
+
+Design references:
+
+https://www.figma.com/design/mBehYqXoeXrGzZex8nA7z8/Car-Rent-Website-Design---Pickolab-Studio-(Community)
+
+https://www.figma.com/design/xvjjcIcBcNXhojew1RKtTC/(Preview-Only)---Rental-Car-Landing-Page-(Community)
+
+https://www.figma.com/design/Xlvza5mSrWLbXSgip7nkri/Doe-Car-Rental-Landing-Page-(Community)
+
+# Final Remarks
+
+I enjoyed working on this project and implemented everything within the given timeframe and following best practices.
+
+Thank you for the opportunity, and I would like to kindly ask for the chance to continue in the selection process. I am very dedicated and determined. I study consistently every day, with a strong sense of discipline, and I firmly believe in my potential because I know what I am capable of.
+
+My English is intermediate, and I understand almost everything spoken; however, I need more practice with my speaking skills to become fluent. I am particularly interested in speaking clubs to improve my fluency.
+
+Thank you again, and I look forward to the possibility of working together.
+
+Thank you,
+Victtor
