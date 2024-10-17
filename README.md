@@ -11,20 +11,20 @@
 
 git clone https://github.com/Victtor-777/test-car
 
-2. Instale as dependências:
+2. Install the dependencies:
 
 npm install
-Configuração de Variáveis de Ambiente: Crie um arquivo .env.local no diretório raiz para armazenar variáveis de ambiente, se necessário.
+Environment Variable Setup: Create a .env.local file in the root directory to store environment variables if needed.
 
-3. Execute o projeto em modo de desenvolvimento:
+3. Run the project in development mode:
 
 npm run dev
 
-4. Construa o projeto para produção:
+4. Build the project for production:
 
 npm run build
 
-5. Inicie o projeto em modo de produção:
+5. Start the project in production mode:
 
 npm start
 
