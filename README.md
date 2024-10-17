@@ -5,6 +5,10 @@
 - [x] Dynamic Routing with Next.js: Utilizes dynamic routes to display results.
 - [x] Environment Setup: Supports environment variables through a `.env.local` file.
 
+exemple .env.local:
+
+API_URL="https://vpic.nhtsa.dot.gov"
+
 ## Setup Instructions
 
 1. Clone o repositório:
