@@ -1,11 +1,11 @@
-## Funcionalidades
+## Features
 
-- [x] Página de Filtro: Permite selecionar uma marca de veículo e o ano do modelo.
-- [x] Página de Resultados: Exibe uma lista dos modelos de veículos filtrados, com base nas seleções feitas na página de filtro.
-- [x] Navegação com Next.js: Utiliza rotas dinâmicas para exibir os resultados.
-- [x] Configuração de Ambiente: Suporte para variáveis de ambiente através de um arquivo .env.local.
+- [x] Filter Page: Allows selecting a vehicle brand and model year.
+- [x] Results Page: Displays a list of filtered vehicle models based on the selections made on the filter page.
+- [x] Dynamic Routing with Next.js: Utilizes dynamic routes to display results.
+- [x] Environment Setup: Supports environment variables through a `.env.local` file.
 
-## Instruções de Configuração
+## Setup Instructions
 
 1. Clone o repositório:
 
