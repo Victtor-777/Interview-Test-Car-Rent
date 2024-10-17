@@ -84,7 +84,7 @@ body {
   }
 
   *::-webkit-scrollbar-thumb {
-    @apply bg-blue-600 rounded-sm;
+    @apply bg-blue-500 rounded-sm;
   }
 }
 

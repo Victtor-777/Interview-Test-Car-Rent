@@ -1,4 +1,5 @@
 import ErrorMessage from "@/components/error-message";
+import { Loading } from "@/components/loading";
 import CarList from "@/components/pages/result/car-list";
 import { getCarsByMakeAndYear } from "@/lib/api";
 import { Suspense } from "react";
@@ -40,7 +41,7 @@ export default async function ResultPage({ params }: ResultPageProps) {
 
   return (
     <div className="container my-6">
-      <Suspense fallback={<p>Loading...</p>}>
+      <Suspense fallback={<Loading />}>
         <CarList makeId={makeId} year={year} />
       </Suspense>
     </div>

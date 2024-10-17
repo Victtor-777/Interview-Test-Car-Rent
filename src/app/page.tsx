@@ -1,4 +1,5 @@
 import FormHome from "@/components/pages/home/form-home";
+import { HeroHome } from "@/components/pages/home/hero-home";
 import { api } from "@/lib/api";
 import { CarMakesResponse } from "@/types/types-cars";
 
@@ -20,8 +21,9 @@ export default async function Home() {
   const cars = await getCars();
 
   return (
-    <div className="container flex flex-col items-center">
-      <h1 className="text-2xl font-bold my-4">Filter Vehicles</h1>
+    <div className="container flex flex-col items-center pt-32 h-screen">
+      <HeroHome />
+      {/* <h1 className="text-2xl font-bold my-4">Filter Vehicles</h1> */}
       <FormHome cars={cars.Results} />
     </div>
   );
