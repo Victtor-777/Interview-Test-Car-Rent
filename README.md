@@ -1,3 +1,9 @@
+# Interview Test
+
+Project for a technical test for an international company, where I had 7 hours to complete it. I finished the project in 6 hours and encountered a small issue with 'Suspense,' but otherwise, I believe it was executed perfectly. Below is the link with all the requirements on Notion and my notes about the project.
+
+Notion: https://develops.notion.site/Front-end-JS-engineer-test-assessment-the-Car-Dealer-App-5b87f1603ac54112bacfdc625a85a87b
+
 ## Features
 
 - [x] Filter Page: Allows selecting a vehicle brand and model year.
